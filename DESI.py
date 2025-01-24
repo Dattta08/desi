@@ -176,7 +176,7 @@ def add_user(message):
     if str(message.chat.id) in admin_ids:
         args = message.text.split()
         admin_user = bot.get_chat(message.chat.id)
-        admin_username = f"{afmin_user.username}" if admin_user.username else f"UserID: {message.chat.id}"
+        admin_username = f"{admin_user.username}" if admin_user.username else f"UserID: {message.chat.id}"
         if len(args) == 3:
             user_id, duration = args[1], int(args[2])
             cost = duration * 100
